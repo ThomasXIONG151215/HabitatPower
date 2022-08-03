@@ -3,9 +3,17 @@
 An open-source platform enabling the simulation of energy-use technics in application of buildings under specific climate conditions.
 In the future, users could upload their solution on any engineering cases and challenge with each other on various aspects.
 
+## Current Main Functions
+
+Open the Integrated App Demo to experience in advance the new prototype of energy system simulation platform.
+
 ## Recent Features
 
+22/08/03 - Uploading the models and research notes essentially for some typical refrigeration system components as well as the ipynb test field for the Shanghai Metro Station cases
+
 ## Accumulations
+
+22/08/03 - Uploading the models and research notes essentially for some typical refrigeration system components as well as the ipynb test field for the Shanghai Metro Station cases
 
 ## Background story
 
