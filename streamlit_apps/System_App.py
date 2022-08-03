@@ -381,6 +381,54 @@ def app():
     ('Cooling_Pump_LD_A1', 'Chiller_LS_A1'), ('Cooling_Pump_LD_A2', 'Chiller_LS_A2'),
     ('Outdoor_Tower', 'Tower_LT_A1'), ('Outdoor_Tower', 'Tower_LT_A2') 
     ])
+    
+    G.add_node('Mix_Air_1', pos = (3.5, 7), type = 'Guide', image = images['guide'], object = Mix_Air_1)
+    G.add_node('Mix_Air_2', pos = (4.5, 7), type = 'Guide', image = images['guide'], object = Mix_Air_2)
+
+    G.add_node('Recirculating_Air_A', pos = (3, 6.5), type = 'Guide', image = images['guide'], object = Recirculating_Air_A)
+    G.add_node('Recirculating_Air_B', pos = (4, 6.5), type = 'Guide', image = images['guide'], object = Recirculating_Air_B)
+
+    G.add_node('Air_Distributor_1', pos = (1, 7), type = 'Guide', image = images['guide'], object = Air_Distributor_1)
+    G.add_node('Air_Distributor_2', pos = (2, 7), type = 'Guide', image = images['guide'], object = Air_Distributor_2)
+
+    G.add_node('Fan_HPF_A1', pos = (3, 6), type = 'Fan', image = images['fan'], object = Fan_HPF_A1)
+    G.add_node('Fan_HPF_B1', pos = (4, 6), type = 'Fan', image = images['fan'], object = Fan_HPF_B1)
+
+    G.add_node('Return_Air_A', pos = (2.7, 5.5), type = 'Guide', image = images['guide'], object = Return_Air_A)
+    G.add_node('Return_Air_B', pos = (3.7, 5.5), type = 'Guide', image = images['guide'], object = Return_Air_B)
+
+    G.add_node('Exhaust_Air', pos = (4.5, 4), type = 'Guide', image = images['guide'], object = Exhaust_Air)
+
+    #车厅 hall
+    #车台 platform
+    G.add_node('Hall', pos = (1.5, 4.5), type = 'Environment', image = images['room'], object = Hall)
+    G.add_node('Platform', pos = (2.5, 4.5), type = 'Environment', image = images['room'], object = Platform)
+
+    G.add_node('Fan_KXF_A1', pos = (6, 6), type = 'Fan', image = images['fan'], object = Fan_KXF_A1)
+    G.add_node('Fan_KXF_B1', pos = (5, 6), type = 'Fan', image = images['fan'], object = Fan_KXF_B1)
+
+    G.add_node('Supply_Air', pos = (5.5, 4), type = 'Guide', image = images['guide'], object = Supply_Air)
+
+    G.add_node('Outdoor_TK', pos = (5, 3), type = 'Environment', image = images['outside'], object = Outdoor_TK)
+
+    G.add_node('Outdoor_Tower', pos = (-1, 9.5), type = 'Environment', image = images['outside'], object = Outdoor_Tower)
+
+    G.add_node('Fan_PY_A1', pos = (2.3, 3.5), type = 'Fan', image = images['fan'], object = Fan_PY_A1)
+
+    G.add_edges_from([ ('Mix_Air_1', 'AHU_KT_A1'), ('Mix_Air_2', 'AHU_KT_A2'),
+    ('AHU_KT_A1', 'Air_Distributor_1'), ('AHU_KT_A2', 'Air_Distributor_2'),
+    ('Air_Distributor_1', 'Hall'), ('Air_Distributor_2', 'Hall'),
+    ('Air_Distributor_1', 'Platform'), ('Air_Distributor_2', 'Platform'),
+    ('Hall', 'Fan_PY_A1'), ('Fan_PY_A1', 'Exhaust_Air'), 
+    ('Fan_HPF_A1', 'Exhaust_Air'), ('Fan_HPF_B1', 'Exhaust_Air'),
+    ('Exhaust_Air', 'Outdoor_TK'),
+    ('Platform', 'Return_Air_A'), ('Platform', 'Return_Air_B'),
+    ('Return_Air_A', 'Fan_HPF_A1'), ('Return_Air_B', 'Fan_HPF_B1'),
+    ('Fan_HPF_A1', 'Recirculating_Air_A'), ('Fan_HPF_B1', 'Recirculating_Air_B'),
+    ('Recirculating_Air_A', 'Mix_Air_1'), ('Recirculating_Air_B','Mix_Air_2'),
+    ('Outdoor_TK', 'Supply_Air'), ('Supply_Air', 'Fan_KXF_A1'), ('Supply_Air', 'Fan_KXF_B1'),
+    ('Fan_KXF_A1', 'Mix_Air_1'), ('Fan_KXF_B1', 'Mix_Air_2'),
+    ])
 
     pos = G.nodes('pos')
 
