@@ -1,8 +1,9 @@
 import streamlit as st 
 
-from streamlit_apps import System_App,Heat_Transfer_App, Wind_Field_App, Gym_app
+from streamlit_apps import System_App,Heat_Transfer_App, Wind_Field_App, Gym_app, Intro_App
 
 PAGES = {
+    "Case Introduction": Intro_App,
     "System Modelling": System_App,
     "Wind Field Modelling": Wind_Field_App,
     "Heat Transfer Modelling": Heat_Transfer_App,
