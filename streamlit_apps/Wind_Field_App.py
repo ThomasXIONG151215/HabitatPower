@@ -50,7 +50,7 @@ def get_stream_function_doublet(strength, xd, yd, X, Y):
 
 def app():
     st.markdown('# Wind Field Simulation')
-    st.markdown('*to have a look on the influence of passengers position to the two-dimensional wind field*')
+    st.markdown('Have a look on the influence of passengers position to the two-dimensional wind field')
 
 
     st.markdown('## Environment Settings')
