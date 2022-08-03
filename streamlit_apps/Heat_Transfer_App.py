@@ -8,6 +8,7 @@ import plotly.express as px
 
 def app():
     st.markdown('# Environment heat transfer simulation')
+    st.markdown('Estimate the conditioning time necessary to bring the temperature to a uniform state under the spatial condition you designate.')
 
     # 出风口参数
     d0 = 1 #直径 #m
