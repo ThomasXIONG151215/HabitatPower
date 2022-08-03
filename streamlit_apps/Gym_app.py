@@ -238,6 +238,7 @@ class GuBeiEnv(Env):
 
 def app():
     st.markdown('# Gym Training and Modelling')
+    st.write('Train a reinforcement learning agent and watches as it learn and execute system control performances')
     env = GuBeiEnv()
     check_env(env)
     env = GuBeiEnv()
