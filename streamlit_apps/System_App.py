@@ -382,7 +382,7 @@ def app():
     ('Outdoor_Tower', 'Tower_LT_A1'), ('Outdoor_Tower', 'Tower_LT_A2') 
     ])
 
-
+    '''
 
     G.add_node('Mix_Air_1', pos = (3.5, 7), type = 'Guide', image = images['guide'], object = Mix_Air_1)
     G.add_node('Mix_Air_2', pos = (4.5, 7), type = 'Guide', image = images['guide'], object = Mix_Air_2)
@@ -434,6 +434,7 @@ def app():
 
 
     ])
+    '''
 
     pos = G.nodes('pos')
 
