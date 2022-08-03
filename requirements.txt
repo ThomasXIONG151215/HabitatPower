@@ -1,0 +1,17 @@
+CoolProp==6.4.1
+dash==2.6.1
+dash_core_components==2.0.0
+dash_html_components==2.0.0
+gym==0.21.0
+ipython==8.4.0
+matplotlib==3.2.2
+networkx==2.8
+numpy==1.18.5
+opencv_python_headless==4.5.4.60
+pandas==1.3.5
+Pillow==9.2.0
+plotly==5.6.0
+pyvis==0.2.1
+stable_baselines3==1.6.0
+streamlit==1.10.0
+streamlit_drawable_canvas==0.9.1
