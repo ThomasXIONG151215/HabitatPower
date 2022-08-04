@@ -238,10 +238,18 @@ class GuBeiEnv(Env):
 
 def app():
     st.markdown('# Gym Training and Modelling')
-    st.write('Train a reinforcement learning agent and watches as it learn and execute system control performances')
     env = GuBeiEnv()
     check_env(env)
     env = GuBeiEnv()
+
+    st.markdown('## Environment and Controls')
+    st.markdown('### State variables')
+    st.write('The state variables are the evaporator outlet water temperature, the chillers, cooling pumps and chilled pumps power consumptions ')
+    st.markdown('### Control parameters')
+    st.write('The controllable parameters are LS_A1_r, LS_A2_r,LS_A1_Te, LS_A2_Te, LD_A1_G, LD_A2_G, LQ_A1_G and LQ_A2_G')
+    st.markdown('In which $A1$ and $A2$ denotes respectively cooling system routine 1 and 2, $r$ denotes for the chiller cooling ratio, $Te$ for the set outlet evaporator water temperature and $G$ for the pump flow rate' )
+    st.markdown('### Environment feedback parameters')
+
 
     st.markdown('## Learning Settings')
     policy = st.selectbox('Choose a RL policy', (['MlpPolicy']))
@@ -256,7 +264,10 @@ def app():
     actions = []
     observations = []
     rewards = []
-    for i in range(100):
+
+    control_steps = st.number_input('number of controlling timesteps', value = 10, step = 10, max_value=100)
+
+    for i in range(control_steps):
         #print(i)
         action, _states = model.predict(obs, deterministic=True)
         obs, reward, done, info = env.step(action)
@@ -276,5 +287,17 @@ def app():
             obs = env.reset()
         
     env.close()
-    st.markdown('## Observation')
-    st.write(observations)
+
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown('## Observation')
+        st.write('T_e_L, Ncomp, Ncool, Nchill')
+        st.write(observations)
+    with col2:
+        st.markdown('## Actions')
+        st.write('LS_A1_r, LS_A2_r,LS_A1_Te, LS_A2_Te, LD_A1_G, LD_A2_G, LQ_A1_G, LQ_A2_G')
+        st.write(actions)
+    with col3:
+        st.markdown('## Rewards')
+        st.write(rewards)
