@@ -32,19 +32,20 @@ def app():
 
     with col1:
         xs = 72 
-        st.write('x length', step = 1, value = xs)
+        st.write('x length', xs)
         ax = 36
-        st.write('x meshes', step = 1, value = ax)
+        st.write('x meshes', ax)
     with col2:
         ys = 30
-        st.write('y length', step= 1, value = ys)
+        st.write('y length',ys)
         bx = 15
-        st.write('y meshes', step = 1, value = bx)
+        st.write('y meshes', bx)
     with col3:
         zs = 10
-        st.write('z length', step = 1, value = zs)
+        st.write('z length', zs)
         cx = 5
-        st.write('z meshes', step = 1, value = cx)
+        st.write('z meshes', cx)
+
 
     C = 0.1 # Courant Number
 
