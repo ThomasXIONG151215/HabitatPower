@@ -31,14 +31,20 @@ def app():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        xs = st.number_input('x length', step = 1, value = 72)
-        ax = st.slider('x meshes', step = 1, value = 72)
+        xs = 72 
+        st.write('x length', step = 1, value = xs)
+        ax = 36
+        st.write('x meshes', step = 1, value = ax)
     with col2:
-        ys = st.number_input('y length', step= 1, value = 8)
-        bx = st.slider('y meshes', step = 1, value = 8)
+        ys = 30
+        st.write('y length', step= 1, value = ys)
+        bx = 15
+        st.write('y meshes', step = 1, value = bx)
     with col3:
-        zs = st.number_input('z length', step = 1, value = 5)
-        cx = st.slider('z meshes', step = 1, value = 10)
+        zs = 10
+        st.write('z length', step = 1, value = zs)
+        cx = 5
+        st.write('z meshes', step = 1, value = cx)
 
     C = 0.1 # Courant Number
 
