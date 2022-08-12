@@ -1,0 +1,28 @@
+{
+     "directed": true,
+     "multigraph": true,
+     "graph": {},
+     "nodes": [
+          {
+               "capacity": 200,
+               "id": "Chiller 1"
+          },
+          {
+               "capacity": 200,
+               "id": "Chiller 2"
+          },
+          {
+               "efficiency": 1.0,
+               "id": "Exchanger 1"
+          },
+          {
+               "head_size": 2,
+               "id": "Cooling Pump"
+          },
+          {
+               "head_size": 2.0,
+               "id": "Chilled Pump"
+          }
+     ],
+     "links": []
+}
