@@ -5,15 +5,18 @@ In the future, users could upload their solution on any engineering cases and ch
 
 ## Current Main Functions
 
-Open the Integrated App Demo to experience in advance the new prototype of energy system simulation platform.
+Open the Integrated App Demo or naviguate through the 'demo_app_v1.x' folders to experience in advance the new prototype of energy system simulation platform.
 
 ## Recent Features
 
-22/08/03 - Uploading the models and research notes essentially for some typical refrigeration system components as well as the ipynb test field for the Shanghai Metro Station cases
+22/08/11 - Now in the 'demo_app_v1.1' users could create and define their own air-conditioning systems and adjust various parameters within extendable pannels
+
 
 ## Accumulations
 
 22/08/03 - Uploading the models and research notes essentially for some typical refrigeration system components as well as the ipynb test field for the Shanghai Metro Station cases
+
+22/08/11 - Now in the 'demo_app_v1.1' users could create and define their own air-conditioning systems and adjust various parameters within extendable pannels
 
 ## Background story
 
