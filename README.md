@@ -1,15 +1,14 @@
 # HabitatPower
 
-An open-source platform enabling the simulation of energy-use technics in application of buildings under specific climate conditions.
-In the future, users could upload their solution on any engineering cases and challenge with each other on various aspects.
+The next-generation open-source platform enabling the design, simulation and optimization of energy system
 
 ## Current Main Functions
 
-Open the Integrated App Demo or naviguate through the 'demo_app_v1.x' folders to experience in advance the new prototype of energy system simulation platform.
+Open the Integrated App Demo or naviguate through the 'demo_app_v1.x' folders to experience in advance the new prototype of energy system simulation platform with the terminal command ""
 
-## Recent Features
+## Newest Features
 
-22/08/11 - Now in the 'demo_app_v1.1' users could create and define their own air-conditioning systems and adjust various parameters within extendable pannels
+22/10/31 - v1.3 update, featuring four main functionalities
 
 
 ## Accumulations
@@ -17,6 +16,10 @@ Open the Integrated App Demo or naviguate through the 'demo_app_v1.x' folders to
 22/08/03 - Uploading the models and research notes essentially for some typical refrigeration system components as well as the ipynb test field for the Shanghai Metro Station cases
 
 22/08/11 - Now in the 'demo_app_v1.1' users could create and define their own air-conditioning systems and adjust various parameters within extendable pannels
+
+22/08/26 - v1.2 update
+
+22/10/31 - v1.3 update, featuring four main functionalities in four modules
 
 ## Background story
 
